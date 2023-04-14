@@ -66,14 +66,38 @@ public class LineComparsion {
 		System.out.println("Length of a line 2 : " + length_of_line_2);
 		System.out.println("--------------------------------------------------");
 		System.out.println();
+		
+		
+		/* Converting the values of line1 and line2
+		 * into string so that we can use equals and compare
+		 * method
+		 */
+		String Line_1 = String.valueOf(length_of_line_1);
+		String Line_2 = String.valueOf(length_of_line_2);
+		
 
 		/*
 		 * Checking if the length of both the lines are equal or not.
 		 */
-		if (length_of_line_1 == length_of_line_2) {
+		if (Line_1.equals(Line_2)) {
 			System.out.println("Length of Line1 and Line2 are equal");
 		} else {
 			System.out.println("Length of Line1 and Line2 are not equal");
+		}
+		System.out.println("--------------------------------------------------");
+		
+		
+		/*
+		 * Checking if the length of line 1 
+		 * is less than or greater than line 2
+		 */
+		int compare = Line_1.compareTo(Line_2);
+	
+		if(compare > 0) {
+			System.out.println("Line 1 is greater than Line 2");
+		}
+		else {
+			System.out.println("Line 1 is less than Line 2");
 		}
 
 	}
